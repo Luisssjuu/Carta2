@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Romántica</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <audio id="bgMusic" src="./assets/mi-cancion.mp3" autoplay loop></audio>
+
+  <!-- Fondo corazones -->
+  <div class="hearts-bg" id="heartsBg"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-love sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="bi bi-heart-fill me-2"></i>Mi Amor</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero d-flex flex-column align-items-center justify-content-center text-center">
+    <h1 class="typing-text">Eres mi lugar favorito 💖</h1>
+    <p class="fade-in-text">Cada segundo contigo es un regalo ✨</p>
+    <p class="fade-in-text">Te amo demasido infinitamente ✨</p>
+    <p class="fade-in-text">Y  eres mi princesa 💖</p>
+  </section>
+
+  <!-- Botones flotantes -->
+  <div class="floating-buttons">
+    <button class="btn btn-love" id="btn1"><i class="bi bi-heart"></i></button>
+    <button class="btn btn-love" id="btn2"><i class="bi bi-flower1"></i></button>
+    <button class="btn btn-love" id="btn3"><i class="bi bi-chat-heart"></i></button>
+    <button class="btn btn-love" id="btn4"><i class="bi bi-envelope-heart"></i></button>
+  </div>
+
+  <!-- Overlay1 -->
+  <div id="overlay1" class="overlay">
+    <div class="teamo-rain" id="rainContainer"></div>
+    <div class="neon-text">Te Amo 💖</div>
+    <button class="close-btn" onclick="closeOverlays()">✖</button>
+  </div>
+
+  <!-- Overlay2 -->
+  <div id="overlay2" class="overlay">
+    <div class="love-card">
+      <div class="love-illustration">
+        <!-- Muñequito -->
+        <svg class="cute-char" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="55" r="28" fill="#fff" stroke="#333" stroke-width="3"/>
+          <circle cx="50" cy="50" r="4" fill="#333"/>
+          <circle cx="70" cy="50" r="4" fill="#333"/>
+          <path d="M50 67 q10 8 20 0" fill="none" stroke="#e25555" stroke-width="3" stroke-linecap="round"/>
+          <path d="M40 100 q20 -10 40 0" fill="none" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+          <path d="M30 85 q15 -10 20 10" fill="none" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+          <path d="M90 85 q-15 -10 -20 10" fill="none" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+          <text x="98" y="50" font-size="18">💗</text>
+        </svg>
+        <!-- Corazón mosaico -->
+        <div id="mosaicHeart" class="mosaic-heart"></div>
+      </div>
+      <div class="love-legend">I Love You</div>
+    </div>
+    <button class="close-btn" onclick="closeOverlays()">✖</button>
+  </div>
+
+  <!-- Overlay3 -->
+  <div id="overlay3" class="overlay">
+    <div class="bubble-messages">
+      <span>Siempre pienso en ti 💭</span>
+      <span>Gracias por estar en mi vida 🌹</span>
+      <span>Cada momento contigo es mágico ✨</span>
+      <span>Eres lo mejor que me ha pasado ❤️</span>
+      <span>Tú y yo, para siempre 💕</span>
+    </div>
+    <button class="close-btn" onclick="closeOverlays()">✖</button>
+  </div>
+
+  <!-- Overlay4 -->
+  <div id="overlay4" class="overlay">
+    <div class="mail-stage">
+      <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        
+        <div class="front"></div>
+      </div>
+
+      <!-- corazones que salen al abrir -->
+      <div class="floating-hearts" id="floatingHearts">
+        <span>❤</span><span>❤</span><span>❤</span><span>❤</span><span>❤</span>
+      </div>
+
+      <div class="mail-actions">
+        <button id="mailOpen" class="btn-outline">OPEN</button>
+        <button id="mailReset" class="btn-outline">RESET</button>
+      </div>
+    </div>
+
+    <button class="close-btn" onclick="closeOverlays()">✖</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
