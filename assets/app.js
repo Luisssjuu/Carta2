@@ -1,4 +1,4 @@
-// ===== Mostrar overlays =====
+
 document.getElementById("btn1").addEventListener("click", () => {
   createTeAmoRain();
   showOverlay("overlay1");
@@ -7,7 +7,7 @@ document.getElementById("btn2").addEventListener("click", () => showOverlay("ove
 document.getElementById("btn3").addEventListener("click", () => showOverlay("overlay3"));
 document.getElementById("btn4").addEventListener("click", () => {
   showOverlay("overlay4");
-  setTimeout(openMail, 300); // abre solito al mostrar
+  setTimeout(openMail, 300); 
 });
 
 function showOverlay(id){
@@ -21,7 +21,7 @@ function closeOverlays(){
   document.getElementById("floatingHearts")?.classList.remove("show");
 }
 
-// ===== Overlay1: lluvia "Te amo" =====
+
 function createTeAmoRain() {
   const container = document.getElementById("rainContainer");
   container.innerHTML = "";
@@ -34,7 +34,6 @@ function createTeAmoRain() {
   }
 }
 
-// ===== Corazones de fondo =====
 document.addEventListener("DOMContentLoaded", () => {
   spawnHearts();
   buildMosaicHeart();
@@ -52,7 +51,7 @@ function spawnHearts(){
   }
 }
 
-// ===== Overlay 2: crear mosaico de corazones =====
+
 function buildMosaicHeart(){
   const grid = document.getElementById('mosaicHeart');
   if(!grid || grid.dataset.built) return;
@@ -75,7 +74,7 @@ function buildMosaicHeart(){
   grid.dataset.built = "1";
 }
 
-// ===== Overlay 4: sobre animado =====
+
 const $envelope = document.getElementById('envelope');
 const $hearts   = document.getElementById('floatingHearts');
 const $openBtn  = document.getElementById('mailOpen');
@@ -85,11 +84,11 @@ function openMail(){
   if(!$envelope) return;
   $envelope.classList.add('open');
 
-  // corazones aparecen después de abrir
+  
   if($hearts){
      $hearts.classList.remove('show');
-     void $hearts.offsetWidth;   // reflow para reiniciar animación
-     setTimeout(() => $hearts.classList.add('show'), 400); // delay tras abrir
+     void $hearts.offsetWidth;  
+     setTimeout(() => $hearts.classList.add('show'), 400); 
   }
 }
 
@@ -101,24 +100,23 @@ function resetMail(){
   }
 }
 
-// Eventos botones OPEN / RESET
+
 $openBtn?.addEventListener('click', openMail);
 $resetBtn?.addEventListener('click', resetMail);
 
-// Hacer accesible la función de cerrar overlays
+
 window.closeOverlays = closeOverlays;
 
-// ===== Música de fondo =====
+
 const bgMusic = document.getElementById("bgMusic");
 
-// función que arranca la música al primer clic
 function startMusicOnce(){
   if(bgMusic.paused){
     bgMusic.play().catch(err => console.log("Autoplay bloqueado:", err));
   }
-  // remover el listener para que no se repita
+  
   document.removeEventListener("click", startMusicOnce);
 }
 
-// escuchamos el primer clic en cualquier parte
+
 document.addEventListener("click", startMusicOnce);

@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Navbar */
+
 .navbar-love {
   background: linear-gradient(90deg, var(--love1), #ff6b86);
 }
@@ -21,7 +21,7 @@ body {
   font-weight: bold;
 }
 
-/* Hero */
+
 .hero {
   min-height: 100vh;
   padding: 50px 20px;
@@ -37,7 +37,7 @@ body {
   color: #6b4b57;
 }
 
-/* Typing */
+
 .typing-text {
   border-right: 2px solid var(--love1);
   white-space: nowrap;
@@ -53,7 +53,7 @@ body {
   50% { border-color: transparent; }
 }
 
-/* Fade-in */
+
 .fade-in-text {
   opacity: 0;
   animation: fadeIn 4s ease-in forwards;
@@ -63,7 +63,7 @@ body {
   to { opacity: 1; }
 }
 
-/* Botones flotantes */
+
 .floating-buttons {
   position: fixed;
   bottom: 20px;
@@ -86,7 +86,7 @@ body {
   font-size: 1.3rem;
 }
 
-/* Overlays */
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -112,7 +112,7 @@ body {
   z-index: 5;
 }
 
-/* Overlay1 */
+
 .teamo-rain {
   position: absolute;
   inset: 0;
@@ -146,7 +146,7 @@ body {
   to { opacity: 0.7; }
 }
 
-/* ===== Overlay 2 ===== */
+
 #overlay2 .love-card{
   background:#fff;
   width:min(900px, 92vw);
@@ -202,7 +202,7 @@ body {
   #overlay2 .cute-char{ width:110px; left:16px; }
 }
 
-/* Overlay3 burbujas */
+
 .bubble-messages {
   position: relative;
   width: 100%;
@@ -221,12 +221,21 @@ body {
 .bubble-messages span:nth-child(3) { top:70%; left:60%; animation-delay:4s; }
 .bubble-messages span:nth-child(4) { top:90%; left:30%; animation-delay:6s; }
 .bubble-messages span:nth-child(5) { top:85%; left:50%; animation-delay:8s; }
+.bubble-messages span:nth-child(6) { top:85%; left:50%; animation-delay:8s; }
+.bubble-messages span:nth-child(7) { top:85%; left:50%; animation-delay:8s; }
+.bubble-messages span:nth-child(8) { top:85%; left:50%; animation-delay:8s; }
+.bubble-messages span:nth-child(9) { top:85%; left:50%; animation-delay:8s; }
+.bubble-messages span:nth-child(10) { top:85%; left:50%; animation-delay:8s; }
+.bubble-messages span:nth-child(11) { top:85%; left:50%; animation-delay:8s; }
+.bubble-messages span:nth-child(12) { top:85%; left:50%; animation-delay:8s; }
+.bubble-messages span:nth-child(13) { top:85%; left:50%; animation-delay:8s; }
+.bubble-messages span:nth-child(14) { top:85%; left:50%; animation-delay:8s; }
 @keyframes floatMsg {
   0% { transform: translateY(0); opacity:1; }
   100% { transform: translateY(-120vh); opacity:0; }
 }
 
-/* ===== Overlay 4 (sobre animado) ===== */
+
 #overlay4 .mail-stage{
   background:#ffe5eb;
   padding:50px 40px 40px;
@@ -238,7 +247,7 @@ body {
   gap:24px;
 }
 
-/* sobre */
+
 #overlay4 .envelope{
   position:relative;
   width:280px;
@@ -289,11 +298,11 @@ body {
   transition:transform .8s ease .15s;
   z-index:1;
 }
-/* abierto */
+
 #overlay4 .envelope.open .flap{ transform:rotateX(180deg); }
 #overlay4 .envelope.open .paper{ transform:translateY(-60%); }
 
-/* corazones emergentes */
+
 #overlay4 .floating-hearts{
   position:absolute;
   bottom:180px; left:0; right:0;
@@ -320,7 +329,7 @@ body {
   100% { transform:translate(-60%,-220px) scale(1.05); opacity:0; }
 }
 
-/* Botones dentro del overlay4 */
+
 #overlay4 .mail-actions{
   display:flex;
   gap:14px;
@@ -340,7 +349,7 @@ body {
   color:#fff;
 }
 
-/* Corazones flotantes de fondo general */
+
 .hearts-bg {
   position: fixed;
   top: 0; left: 0;
@@ -372,7 +381,7 @@ body {
   100% { transform: translateY(-120vh) rotate(45deg); opacity: 0; }
 }
 
-/* Corregir color dentro de overlay2 */
+
 #overlay2 .love-card { color:#333; }
 #overlay2 .mosaic-heart,
 #overlay2 .mini-heart {
